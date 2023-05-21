@@ -2,17 +2,10 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 
 const Post = () => {
-  const { query, isReady,asPath  } = useRouter();
-  console.log('query',query);
-  // console.log("isReady", isReady);
-  // console.log("asPath", asPath);
-  const { postID } = query;
-  useEffect(() => {
-    if (!isReady) return;
-    console.log(postID);
-  }, [isReady]);
+  const { query, isReady } = useRouter();
+  const { postID }: { postID?: string[] }  = query;
 
-  return <p>Post id: {postID}</p>;
+  return <p>Post id: {postID?.map((v) => v + ",")}</p>;
 };
 
 export default Post;

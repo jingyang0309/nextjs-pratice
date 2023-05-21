@@ -1,0 +1,4 @@
+.bcg{
+    background-color: bisque; 
+    composes:title from '../fetchssg/fetchssg.module.css'
+}

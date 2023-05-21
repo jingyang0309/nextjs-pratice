@@ -1,4 +1,5 @@
 import {  GetStaticProps } from "next";
+import styles  from './fetchssg.module.css'
 
 interface Post {
   userId: number;
@@ -14,8 +15,8 @@ interface HomeProps {
 export default function Home({ post }: HomeProps) {
   return (
     <div>
-      <h2>SSG</h2>
-      <h1>{post.title}</h1>
+      <h2 className={styles.title}>SSG</h2>
+      <h1 className={styles.bgc}>{post.title}</h1>
       <p>{post.body}</p>
     </div>
   );

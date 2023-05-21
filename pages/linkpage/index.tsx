@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 function LinkPage() {
+  const posts = [{ id: "1" }, { id: "2" }, { id: "3" }];
   return (
     <ul>
       <li>
@@ -31,6 +32,11 @@ function LinkPage() {
           catch all routes
         </Link>
       </li>
+      {posts.map((post) => (
+        <li key={post.id}>
+          <Link href={`/post/${post.id}`}>Post id :{post.id}</Link>
+        </li>
+      ))}
     </ul>
   );
 }

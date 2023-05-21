@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import style from './fetchcsr.module.css'
 
 // type Post ={
 //   userId: number;
@@ -28,8 +29,8 @@ export default function Home() {
 
   return (
     <div>
-      <h2>CSR</h2>
-      <h1>{post?.title}</h1>
+      <h2 className="middle">CSR</h2>
+      <h1 className={style.bcg}>{post?.title}</h1>
       <p>{post?.body}</p>
     </div>
   );
